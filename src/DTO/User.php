@@ -39,11 +39,30 @@ class User
         return $this->name;
     }
 
+    public function getFirstName(): string
+    {
+        return $this->name->getFirst();
+    }
+
+    public function getLastName(): string
+    {
+        return $this->name->getLast();
+    }
+
     public function getLocation(): Location
     {
         return $this->location;
     }
 
+    public function getCountry(): string
+    {
+        return $this->location->getCountry();
+    }
+
+    public function getCity(): string
+    {
+        return $this->location->getCity();
+    }
     public function getEmail(): string
     {
         return $this->email;
@@ -52,6 +71,11 @@ class User
     public function getLogin(): Login
     {
         return $this->login;
+    }
+
+    public function getUserName(): string
+    {
+        return $this->login->getUsername();
     }
 
     public function getDob(): DateOfBirth
